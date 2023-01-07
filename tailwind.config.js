@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Inter: ["Inter", "sans-serif"],
+        Raleway: ["Raleway", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
