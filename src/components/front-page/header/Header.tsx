@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 const Header: React.FC<{}> = () => {
 
     return (
-        <div>
+        <div className=''>
             <section
 
                 style={{
