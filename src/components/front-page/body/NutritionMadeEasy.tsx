@@ -1,13 +1,13 @@
 import React from "react";
 
 const NutritionMadeEasy: React.FC<{}> = () => {
-    return <div className="w-full h-[454px] bg-white">
+    return <div className="w-full h-[454px] pt-8 bg-white">
         <div className="text-center">
             <h1 className="font-bold font-Inter text-4xl text-[#252B42]">Nutrition Made Easy</h1>
             <h2 className="font-regular font-Inter text-xl mt-4 text-[#374754]">Find super nutritious meals in just <br></br>3 simple steps</h2>
         </div>
-        <div className="flex mt-14 ml-[10vw] mr-[10vw]">
-            <div className="">
+        <div className="flex mt-14 ml-[13vw] mr-[13vw] scale-[0.8]">
+            <div className="ml-[1vh] w-[430px]">
                 <div className="flex bg-[#14FFBC] ml-[20vh] w-[80px] h-[80px] rounded-full justify-center shadow-md shadow-neutral-400">
                     <svg className="mt-4 mr-1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="46" height="45" viewBox="0 0 46 45" fill="none">
                         <rect x="0.5" width="45" height="45" fill="url(#pattern0)" />
@@ -20,11 +20,11 @@ const NutritionMadeEasy: React.FC<{}> = () => {
                     </svg>
                 </div>
                 <h3 className="text-center text-lg font-Inter font-bold text-[#252B42] mt-5">Input your ingredients</h3>
-                <p className="text-center font-Inter mt-2">Use ingredients already in your pantry to generate meals</p>
+                <p className="w-2/3 text-center font-Inter  mt-2">Use ingredients already in your pantry to generate meals</p>
             </div>
-            <div>
-                <div>
-                    <div className="flex bg-[#14FFBC] ml-[20vh]  w-[80px] h-[80px] rounded-full justify-center shadow-md shadow-neutral-400">
+            <div className="w-[500px]">
+                <div className="ml-20">
+                    <div className="flex bg-[#14FFBC] ml-[9vh]  w-[80px] h-[80px] rounded-full justify-center shadow-md shadow-neutral-400">
                         <svg className="mt-4 mr-1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="46" height="45" viewBox="0 0 46 45" fill="none">
                             <rect x="0.5" width="45" height="45" fill="url(#pattern0)" />
                             <defs>
@@ -35,13 +35,13 @@ const NutritionMadeEasy: React.FC<{}> = () => {
                             </defs>
                         </svg>
                     </div>
-                    <h3 className="text-center text-lg font-Inter font-bold text-[#252B42] mt-5">Set your nutrition goals</h3>
-                    <p className="text-center font-Inter mt-2">Set your goal to lose fat, gain muscle, lose weight, etc</p>
+                    <h3 className="text-center pr-[14vh] text-lg font-Inter font-bold text-[#252B42] mt-5">Set your nutrition goals</h3>
+                    <p className="text-center w-2/3 font-Inter mt-2">Set your goal to lose fat, gain muscle, lose weight, etc</p>
                 </div>
             </div>
-            <div className="">
+            <div className="w-[400px]">
                 <div>
-                    <div className="flex bg-[#14FFBC] ml-[20vh] w-[80px] h-[80px] rounded-full justify-center shadow-md shadow-neutral-400">
+                    <div className="flex bg-[#14FFBC] ml-[9vh] w-[80px] h-[80px] rounded-full justify-center shadow-md shadow-neutral-400">
                         <svg className="mt-4 mr-1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="46" height="45" viewBox="0 0 46 45" fill="none">
                             <rect x="0.5" width="45" height="45" fill="url(#pattern0)" />
                             <defs>
@@ -53,8 +53,8 @@ const NutritionMadeEasy: React.FC<{}> = () => {
                         </svg>
                     </div>
                     <div>
-                        <h3 className="text-center text-lg font-Inter font-bold text-[#252B42] mt-5">Find nutritious meals</h3>
-                        <p className="text-center font-Inter mt-2">Find super nutritious meals you can make right now!</p>
+                        <h3 className="ml-5 text-left text-lg font-Inter font-bold text-[#252B42] mt-5">Find nutritious meals</h3>
+                        <p className="text-center w-2/3 font-Inter mt-2">Find super nutritious meals you can make right now!</p>
                     </div>
                 </div>
             </div>
