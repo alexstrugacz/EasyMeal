@@ -3,6 +3,7 @@ import GetStartedButton from "../../../global/GetStartedButton";
 import { TypeAnimation } from "react-type-animation";
 
 const Header: React.FC<{}> = () => {
+
   return (
     <div>
       <section
@@ -47,10 +48,11 @@ const Header: React.FC<{}> = () => {
           <br /> using what’s already in your kitchen
         </p>
 
-        <GetStartedButton />
-      </section>
-    </div>
-  );
+
+                <GetStartedButton />
+            </section>
+        </div>
+    );
 };
 
 export default Header;

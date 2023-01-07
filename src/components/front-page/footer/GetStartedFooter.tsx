@@ -11,6 +11,6 @@ const GetStartedFooter: React.FC<{}> = () => {
       <GetStartedButton />
     </div>
   );
-};
+
 
 export default GetStartedFooter;
