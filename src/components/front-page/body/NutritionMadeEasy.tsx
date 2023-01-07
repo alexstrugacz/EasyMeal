@@ -7,7 +7,7 @@ const NutritionMadeEasy: React.FC<{}> = () => {
             <h2 className="font-regular font-Inter text-2xl mt-4 text-[#374754]">Find super nutritious meals in just <br></br>3 simple steps</h2>
         </div>
         <div className="flex flex-row justify-center">
-            <div>
+            <div className="">
                 <div className="flex ml-[18.4vh] bg-[#14FFBC] w-[80px] h-[80px] rounded-full justify-center">
                     <svg className="mt-4 mr-1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="46" height="45" viewBox="0 0 46 45" fill="none">
                         <rect x="0.5" width="45" height="45" fill="url(#pattern0)" />
