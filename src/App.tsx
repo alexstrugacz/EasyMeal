@@ -4,6 +4,7 @@ import Landing from './components/front-page/Landing';
 import RecipeFinder from './components/food-finder-page/RecipeFinder';
 import GetStartedButton from './global/GetStartedButton';
 //test
+//test2
 
 function App() {
   return (
