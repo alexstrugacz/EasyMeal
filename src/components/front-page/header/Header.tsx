@@ -25,13 +25,15 @@ const Header: React.FC<{}> = () => {
       sequence={[
         'low-fat',
         4000,
-        'low-carb',
+        'high-protein',
         4000,
         'low-sugar',
         4000,
-        'high-protein',
-        4000,
         'nutritious',
+        4000,
+        'low-carb',
+        4000,
+        'healthy',
         4000,
         () => {
           console.log('Done typing!'); // Place optional callbacks anywhere in the array
