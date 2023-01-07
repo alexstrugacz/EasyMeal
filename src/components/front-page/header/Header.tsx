@@ -1,28 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import GetStartedButton from '../../../global/GetStartedButton';
+import { TypeAnimation } from 'react-type-animation';
 
 const Header: React.FC<{}> = () => {
-  const [text, setText] = useState('high-protein');
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (text === 'high-protein') {
-        setText('low-sugar');
-      } else if (text === 'low-sugar') {
-        setText('low-carb');
-      } else if (text === 'low-carb') {
-        setText('low-fat');
-      }else {
-        setText('high-protein');
-      }
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, [text]);
 
   return (
     <div>
       <section
+      
         style={{
           backgroundImage: `url(https://i.ibb.co/P53mdMn/Header-Background-Image.png)`,
           backgroundSize: 'cover',
@@ -34,10 +19,35 @@ const Header: React.FC<{}> = () => {
           EasyMeal
         </h1>
         <p className="font-Raleway text-2xl text-white leading-normal text-center order-3 w-987px h-112px pt-4 pb-6">
-          Instantly find <span className="text-decoration-line: underline font-bold">{text}</span> meals
-          <br />
-          using what’s already in your kitchen
-        </p>
+  Instantly find
+  <span className="text-decoration-line: underline font-bold">
+    <TypeAnimation
+      sequence={[
+        'low-fat',
+        4000,
+        'low-carb',
+        4000,
+        'low-sugar',
+        4000,
+        'high-protein',
+        4000,
+        'nutritious',
+        4000,
+        () => {
+          console.log('Done typing!'); // Place optional callbacks anywhere in the array
+        }
+      ]}
+      wrapper="span"
+      style={{ marginLeft: '8px' }}
+      cursor={true}
+      repeat={Infinity}
+    />
+  </span>
+  meals<br/> using what’s already in your kitchen
+</p>
+
+
+
         <GetStartedButton />
       </section>
     </div>
