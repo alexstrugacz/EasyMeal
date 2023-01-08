@@ -6,12 +6,13 @@ import Filter from "./assets/Filter";
 import { ArrowTrendingUpIcon, FaceSmileIcon } from "@heroicons/react/24/solid";
 
 const NutritionMadeEasy: React.FC<{}> = () => {
-    return <div className="w-full h-full pt-8 bg-white">
+    return <div className="w-full h-full pt-8 bg-white mb-5">
         <div className="text-center">
-            <h1 className="font-bold mt-24 font-Inter text-3xl md:text-4xl text-[#252B42]">Nutrition Made Easy</h1>
+            <h1 className="font-bold mt-12 font-Inter text-3xl md:text-4xl text-[#252B42]">Nutrition Made Easy</h1>
             <h2 className="font-regular font-Inter text-xl mt-4 text-[#374754]">Find super nutritious meals in just <br></br>3 simple steps</h2>
         </div>
-        <div className="w-full sm:mx-auto md:flex justify-center flex-wrap pt-4 pb-12">
+        <br />
+        <div className="w-full md:mx-auto md:max-w-6xl md:px-10 sm:mx-auto md:flex justify-center flex-wrap pt-4 pb-12">
             <MiniItem
                 icon={<Bread />}
                 header={"Input your ingredients"}

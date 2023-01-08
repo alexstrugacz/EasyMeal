@@ -1,5 +1,5 @@
 import React from 'react';
-const mb2 = require('./images/mbprotwo.png');
+const mb2 = require('./images/laptop-2.png');
 
 const WHITEPAPER = "https://docs.google.com/document/d/1-MwgyTuHoNe9Abqr7I1n2g36QSnwSh7rTYbGU1hf8KI/edit?usp=sharing";
 
