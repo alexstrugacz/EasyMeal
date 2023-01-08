@@ -9,7 +9,6 @@ const MiniItem: React.FC<{
         <div className="w-full lg:w-1/3 max-w-sm pb-0 md:pb-10 p-6 flex flex-col flex-grow flex-shrink hover:scale-105 transition-all">
             <div className="flex flex-col items-center flex-1 py-7 bg-zinc-100 rounded-2xl overflow-hidden shadow">
                 <div className="flex justify-center items-center bg-[#14FFBC] w-16 h-16 rounded-full shadow-md">
-
                     {props.icon && (
                         props.icon
                     )}
