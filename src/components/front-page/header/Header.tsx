@@ -17,14 +17,12 @@ const Header: React.FC<{}> = () => {
                 }}
                 className="relative first-line:w-full h-[754px]"
             >
-                <div className={"absolute top-0 w-screen left-0 h-[754px] z-99"}>
-                    <div className="font-Raleway text-7xl font-bold text-center  text-[#0ACF83] leading-none tracking-tight order-2 w-381px h-92px pt-[200px] drop-shadow-lg">
-                        <h1>
-                            <img alt="easymeal" className="inline w-[40px] h-[62px] mr-3 mb-4" src={logo}></img>
-                            EasyMeal
-                        </h1>
-                    </div>
-                    <p className="font-Raleway text-2xl text-white leading-normal text-center order-3 w-987px h-112px pt-4 pb-6">
+                <div className={"absolute top-0 w-screen left-0 h-[754px] z-99 sm:px-10"}>
+                    <h1 className="font-Raleway text-7xl sm:text-5xl font-bold text-center text-[#0ACF83] leading-none tracking-tight order-2 w-381px h-92px pt-[200px] drop-shadow-lg">
+                        EasyMeal
+                    </h1>
+                    <p className="font-Raleway text-lg md:text-2xl text-white leading-normal text-center order-3 w-987px h-112px pt-4 pb-6">
+
                         Instantly find
                         <span className="text-decoration-line: underline font-bold">
                             <TypeAnimation
@@ -66,7 +64,7 @@ const Header: React.FC<{}> = () => {
                         pointerEvents: "none"
                     }}
                     src={overlay}
-                    className={"absolute top-0 w-screen left-0 h-[754px] z-50"}
+                    className={"absolute top-[0.6px] w-screen left-0 h-[754px] z-50"}
                 />
             </section>
 
