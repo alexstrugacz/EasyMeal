@@ -115,8 +115,7 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
             <div className="modal-overlay z-10 bg-[#7f7f7f] opacity-50 fixed left-0 top-0 right-0 bottom-0" onClick={onClose}></div>
             <div className={"w-3/5 z-50 rounded-3xl items-center fixed left-1/2 -translate-x-1/2 top-20 h-5/6 overflow-y-auto"}>
                 <div className="font-Inter bg-[#fff] rounded-3xl overflow-x-hidden" onClick={(event) => event.stopPropagation()}>
-                    <img src={recipe.recipe.imageUrl} className="w-full object-cover h-96 rounded-3xl" />
-
+                    <img src={recipe.recipe.imageUrl} className="w-full object-cover h-96 rounded-3xl scale-[1.003]" />
                     <div className={"px-10 pb-10"}>
                         <h4 className="mt-10 text-3xl font-bold">{recipe.recipe.header}</h4>
                         <div className="border-t-1 border-b-1 border-[#eee] text-lg">
