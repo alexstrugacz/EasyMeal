@@ -1,4 +1,5 @@
 import React from 'react';
+import useOnScreen from '../../../hooks/use-on-screen-hook';
 import { IRecipe } from '../../../types/IRecipe';
 import ResultItem from '../ResultItem/ResultItem';
 
@@ -8,6 +9,10 @@ const ResultsSection: React.FC<{
 
     const [displayedRecipes, setDisplayedRecipes] = React.useState<IRecipe[]>([]);
     const [currentIndex, setCurrentIndex] = React.useState<number>(0);
+
+    const itemRef = React.useRef<HTMLDivElement>(null);
+
+    const isOnScreen = useOnScreen(itemRef);
 
     const handleLoadMore = () => {
         const totalLength = props.recipes?.length || 0;
@@ -23,7 +28,7 @@ const ResultsSection: React.FC<{
 
     React.useEffect(() => {
         handleLoadMore();
-    }, [props.recipes])
+    }, [props.recipes, isOnScreen])
 
     if (props.recipes) {
         return <div className={"flex-1 h-full overflow-auto"}>
@@ -36,14 +41,9 @@ const ResultsSection: React.FC<{
                         />
                     )
                 })}
-                <div className={"bg-blue-300 h-10"}>
-                    <p>PAGINATION DIV</p>
+                <div ref={itemRef} className={"bg-white h-10"}>
 
                 </div>
-
-
-
-
             </div>;
         </div>
     } else {
