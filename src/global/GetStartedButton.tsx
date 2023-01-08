@@ -1,16 +1,22 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 
 const GetStartedButton: React.FC<{}> = () => {
-    return (
-        <div className="flex justify-center">
-            <div>
-                <button className="bg-[#0ACF83] hover:bg-[#097f52] hover:scale-105 transition-all px-8 py-1.5 rounded-full text-white mx-auto drop-shadow-mg">
-                    Get started
-                </button>
-            </div>
+
+    const navigate = useNavigate();
+
+    const redirect = () => {
+        navigate('/recipefinder')
+    }
+
+    return <div className="group flex justify-center">
+        <div>
+            <button onClick={redirect} className="bg-[#0ACF83] hover:bg-[#0CAF70] hover:scale-105 transition-all px-16 py-1.5 rounded-full text-white mx-auto">
+                Get started
+            </button>
         </div>
-    );
+    </div>
 };
 
 export default GetStartedButton;
