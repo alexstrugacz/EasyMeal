@@ -4,7 +4,8 @@ import { IRecipe } from '../../../types/IRecipe';
 import ResultItem from '../ResultItem/ResultItem';
 
 const ResultsSection: React.FC<{
-    recipes: IRecipe[] | undefined
+    recipes: IRecipe[] | undefined;
+    handleSelectResult: (recipe: IRecipe | undefined) => void;
 }> = (props) => {
 
     const [displayedRecipes, setDisplayedRecipes] = React.useState<IRecipe[]>([]);
@@ -28,7 +29,12 @@ const ResultsSection: React.FC<{
 
     React.useEffect(() => {
         handleLoadMore();
-    }, [props.recipes, isOnScreen])
+    }, [isOnScreen])
+
+    React.useEffect(() => {
+        setDisplayedRecipes(props.recipes?.slice(0, 10) || []);
+        setCurrentIndex(10)
+    }, [props.recipes])
 
     if (props.recipes) {
         return <div className={"flex-1 h-full overflow-auto"}>
@@ -38,9 +44,14 @@ const ResultsSection: React.FC<{
                         <ResultItem
                             key={`recipe-${index}`}
                             recipe={recipe}
+                            handleSelect={() => props.handleSelectResult(recipe)}
                         />
                     )
                 })}
+                {(displayedRecipes.length === 0) && (
+                    <p className={"font-Inter text-2xl font-semibold text-[#6d6d6d] my-auto"}>No recipes found.</p>
+
+                )}
                 <div ref={itemRef} className={"bg-white h-10"}>
 
                 </div>
@@ -48,7 +59,7 @@ const ResultsSection: React.FC<{
         </div>
     } else {
         return <div className={"flex flex-1 justify-center items-center h-screen p-10"}>
-            <p className={"font-Inter text-2xl font-semibold text-[#f7aa47]"}>Add some filters to get meals!</p>
+            <p className={"font-Inter text-2xl font-semibold text-[#f7aa47]"}>Add some filters to get recipes!</p>
         </div>
     }
 };
