@@ -5,6 +5,19 @@ export const useRecipeFinderHook = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>();
   const [results, setResults] = useState<IRecipe[] | undefined>();
+  const [selectedResult, setSelectedResult] = useState<IRecipe | undefined>();
+  const [nutritionGoal, setNutritionGoal] = useState<string | undefined>();
+  const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]);
+
+  const handleSelectResult = (newResult: IRecipe | undefined) => {
+    setSelectedResult(newResult);
+
+  }
+
+  const handleClose = () => {
+    console.log("Close")
+    setSelectedResult(undefined);
+  }
 
   const handleLoadRecipes = async (
     ingredients: string[],
@@ -12,6 +25,9 @@ export const useRecipeFinderHook = () => {
     minCalories: number | undefined,
     maxCalories: number | undefined
   ) => {
+    setSelectedIngredients(ingredients)
+    setNutritionGoal(nutritionGoal)
+
     let url = `https://easymeal.herokuapp.com/recipes?ingredients=${ingredients.join(
       ","
     )}&fitnessGoal=${nutritionGoal}`;
@@ -33,8 +49,13 @@ export const useRecipeFinderHook = () => {
   };
 
   return {
+    nutritionGoal,
     error,
     results,
     handleLoadRecipes,
+    selectedResult,
+    handleSelectResult,
+    handleClose,
+    selectedIngredients
   };
 };

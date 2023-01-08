@@ -4,7 +4,7 @@ import Body from './body/Body';
 import Footer from "./footer/GetStartedFooter"
 
 const Landing: React.FC<{}> = () => {
-    return <div>
+    return <div className={"overflow-x-hidden"}>
         <Header />
         <Body />
         <Footer />
