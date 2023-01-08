@@ -1,7 +1,7 @@
 import React from 'react';
 
-
 //add ingredients item component in here, find recipes button here, etc @Nectar0 (Alex) if you have questions 
+
 
 import Range from "rc-slider";
 import 'rc-slider/assets/index.css';
