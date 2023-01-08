@@ -1,5 +1,5 @@
 import React from 'react';
-const mb1 = require('./images/mbproone.png');
+const mb1 = require('./images/laptop-1.png');
 
 
 const EasyMealHealthScore: React.FC<{}> = () => {
