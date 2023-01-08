@@ -48,10 +48,11 @@ const ResultsSection: React.FC<{
             </div>
 
             <div className="sm:h-screen sm:overflow-auto sm:m-4 md:m-8 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4 gap-4 wrap">
-
-                <br />
-                <br />
-                <br />
+                <div className={"md:hidden"}>
+                    <br />
+                    <br />
+                    <br />
+                </div>
                 {displayedRecipes.map((recipe, index) => {
                     return (
                         <ResultItem
