@@ -16,7 +16,7 @@ const GetStartedButton: React.FC<{}> = () => {
                 Get started
             </button>
         </div>
-    </div>;
+    </div>
 };
 
 export default GetStartedButton;
