@@ -17,8 +17,8 @@ export const INGREDIENT_DATA = {
         'Mozzarella',
         'Parmesan cheese',
         'Skim milk',
-        'Vanilla extract',
-        'Vanilla greek yogurt'],
+        'Vanilla',
+        'Yogurt'],
     '🥜 Fats and Oils': ['Canola oil', 'Mayonnaise', 'Oil', 'Oil cooking spray'],
     '🍎 Fruits': ['Apple',
         'Apricot',
@@ -129,4 +129,10 @@ export const FITNESS_GOALS: { [key: string]: string } = {
     "Gain muscle": "muscleGain",
     "Lose fat": "fatLoss",
     "Lose weight": "weightLoss"
+}
+
+export const FITNESS_GOALS_PARAMETERS: { [key: string]: string[] } = {
+    "muscleGain": ["protein", "carbohydrates"],
+    "fatLoss": ["protein", "carbohyddrates", "sugar", "fat"],
+    "weightLoss": ["protein", "carbohydrates"],
 }
