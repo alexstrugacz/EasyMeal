@@ -16,7 +16,7 @@ const ResultItem: React.FC<{
 
         <div className='hover:scale-[1.02] transition-all'>
             <div className='flex flex-col justify-between bg-[#F0F0F0] shadow-md rounded-md p-3 h-[500px]'>
-                <img className={"bg-zinc-400 object-cover rounded-2xl w-full h-64"} src={props.recipe.recipe.imageUrl} />
+                <img alt="recipe" className={"bg-zinc-400 object-cover rounded-2xl w-full h-64"} src={props.recipe.recipe.imageUrl} />
                 <p className={"font-Inter text-[#E0E0E] text-left font-medium font-bold text-xl mt-4"}>{props.recipe.recipe.header}</p>
                 <div className='flex text-[#0E0E0E]'>
                     <p className={"font-Inter text-left first-letter:text-md mt-1"}>{`${props.recipe.recipe.calories} calories`}</p>
