@@ -8,7 +8,7 @@ const RecipeFinder: React.FC<{}> = () => {
         <TabBar handleLoadRecipes={function (ingredients: string[], nutritionGoal: string, minCalories: number | undefined, maxCalories: number | undefined): Promise<void> {
             throw new Error("Function not implemented.");
         } } />
-        <ResultsSection />
+        <ResultsSection recipes={undefined} />
     </div>;
 };
 
