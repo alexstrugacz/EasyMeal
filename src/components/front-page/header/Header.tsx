@@ -62,7 +62,7 @@ const Header: React.FC<{}> = () => {
                         pointerEvents: "none"
                     }}
                     src={overlay}
-                    className={"absolute top-0 w-screen left-0 h-[754px] z-50"}
+                    className={"absolute top-[0.6px] w-screen left-0 h-[754px] z-50"}
                 />
             </section>
 
