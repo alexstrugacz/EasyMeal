@@ -11,7 +11,7 @@ const NutritionMadeEasy: React.FC<{}> = () => {
             <h1 className="font-bold mt-24 font-Inter text-4xl text-[#252B42]">Nutrition Made Easy</h1>
             <h2 className="font-regular font-Inter text-xl mt-4 text-[#374754]">Find super nutritious meals in just <br></br>3 simple steps</h2>
         </div>
-        <div className="container mx-auto flex justify-center flex-wrap pt-4 pb-12">
+        <div className="w-full sm:mx-auto md:flex justify-center flex-wrap pt-4 pb-12">
             <MiniItem
                 icon={<Bread />}
                 header={"Input your ingredients"}
