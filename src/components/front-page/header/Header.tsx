@@ -16,11 +16,11 @@ const Header: React.FC<{}> = () => {
                 }}
                 className="relative first-line:w-full h-[754px]"
             >
-                <div className={"absolute top-0 w-screen left-0 h-[754px] z-99"}>
-                    <h1 className="font-Raleway text-7xl font-bold text-center text-[#0ACF83] leading-none tracking-tight order-2 w-381px h-92px pt-[200px] drop-shadow-lg">
+                <div className={"absolute top-0 w-screen left-0 h-[754px] z-99 sm:px-10"}>
+                    <h1 className="font-Raleway text-7xl sm:text-5xl font-bold text-center text-[#0ACF83] leading-none tracking-tight order-2 w-381px h-92px pt-[200px] drop-shadow-lg">
                         EasyMeal
                     </h1>
-                    <p className="font-Raleway text-2xl text-white leading-normal text-center order-3 w-987px h-112px pt-4 pb-6">
+                    <p className="font-Raleway text-lg md:text-2xl text-white leading-normal text-center order-3 w-987px h-112px pt-4 pb-6">
                         Instantly find
                         <span className="text-decoration-line: underline font-bold">
                             <TypeAnimation
