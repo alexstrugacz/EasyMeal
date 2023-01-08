@@ -1,14 +1,24 @@
 import React, { useState, useEffect } from "react";
 import GetStartedButton from "../../../global/GetStartedButton";
 import { TypeAnimation } from "react-type-animation";
+const headers = require("./assets/headers.jpg");
+const overlay = require("./assets/overlay.png");
 
 const Header: React.FC<{}> = () => {
 
     return (
-        <div>
+        <div className={"relative"}>
+            <img
+                style={{
+                    backgroundSize: "fill",
+
+                }}
+                src={overlay}
+                className={"absolute top-0 w-screen left-0 h-[754px] z-99"}
+            />
             <section
                 style={{
-                    backgroundImage: `url(https://i.ibb.co/P53mdMn/Header-Background-Image.png)`,
+                    backgroundImage: `url(${headers})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
