@@ -21,8 +21,6 @@ const ResultsSection: React.FC<{
                                     {recipe.recipe.ingredients[1] + recipe.recipe.ingredients[2]}
                                 </div>
                             </div>
-
-
                         </div>
                     )
 
