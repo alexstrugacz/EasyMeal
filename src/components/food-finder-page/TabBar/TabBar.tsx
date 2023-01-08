@@ -124,10 +124,10 @@ const TabBar: React.FC<{
     }, [])
 
     return (
-        <div className={`flex bg-[#F3F3F3] shadow-md flex-1 h-full p-8 pr-4 transition-all overflow-auto`}>
-            <div className={"max-h-full"}>
-                <h2 className="font-Raleway font-bold text-[#0ACF83] text-4xl">EasyMeal</h2>
-                <br />
+        <div className={`flex bg-[#F3F3F3] shadow-md w-[500] h-full p-8 pr-4 transition-all overflow-auto`}>
+            <div className={"max-h-full w-fit"}>
+                <a href="/" className="font-Raleway font-bold text-[#0ACF83] text-4xl">EasyMeal</a>
+                <br /><br />
 
                 <p className="font-bold font-Inter text-xl mb-2">What is your primary fitness goal?</p>
 
@@ -148,7 +148,7 @@ const TabBar: React.FC<{
                 <br />
                 <p className="font-bold font-Inter text-xl">What ingredients do you have?</p>
                 <br />
-                <div className="flex flex-wrap gap-3">
+                <div className="w-[500px] flex flex-wrap gap-3">
                     {categories.map((category, index) => {
                         const ingredientInfo = ingredientTypes[category];
 
@@ -164,7 +164,7 @@ const TabBar: React.FC<{
                         const displaying = ingredientDisplayed.includes(category);
 
                         return (
-                            <div key={`category-item-${index}`} className={"w-5/12 items-center"}>
+                            <div key={`category-item-${index}`} className={"w-60 items-center"}>
                                 <div
                                     onClick={() => {
                                         toggleDisplayingIngredient(category);
@@ -212,10 +212,10 @@ const TabBar: React.FC<{
                 <br />
                 <br />
                 {error && (
-                    <p className={"text-red-600 mb-3 transition-all"}>{error}</p>
+                    <p className={"text-red-600 mb-3 transition-all font-Inter"}>{error}</p>
                 )}
                 {loading ? (
-                    <p>Loading...</p>
+                    <p className={"font-Inter"}>Loading...</p>
                 ) : (
                     <div className={"flex justify-start"}>
                         <button onClick={() => {
