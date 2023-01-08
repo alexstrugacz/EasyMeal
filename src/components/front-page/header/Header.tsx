@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GetStartedButton from "../../../global/GetStartedButton";
 import { TypeAnimation } from "react-type-animation";
+const logo = require("./assets/logo.png");
 const headers = require("./assets/headers.jpg");
 const overlay = require("./assets/overlay.png");
 
@@ -21,6 +22,7 @@ const Header: React.FC<{}> = () => {
                         EasyMeal
                     </h1>
                     <p className="font-Raleway text-lg md:text-2xl text-white leading-normal text-center order-3 w-987px h-112px pt-4 pb-6">
+
                         Instantly find
                         <span className="text-decoration-line: underline font-bold">
                             <TypeAnimation
