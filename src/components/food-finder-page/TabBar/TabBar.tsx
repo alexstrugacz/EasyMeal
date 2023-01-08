@@ -1,7 +1,7 @@
 import React from 'react';
 
-
 //add ingredients item component in here, find recipes button here, etc @Nectar0 (Alex) if you have questions 
+
 
 import Range from "rc-slider";
 import 'rc-slider/assets/index.css';
@@ -10,6 +10,8 @@ import { FITNESS_GOALS, INGREDIENT_DATA } from '../../../constants/ingredient-da
 import TabBarOption from './TabBarOption';
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import { Puff } from 'react-loading-icons'
+const logo = require("../logo.png");
+
 
 const TabBar: React.FC<{
     displayingRecipes: boolean;
@@ -127,6 +129,7 @@ const TabBar: React.FC<{
     return (
         <div className={`bg-[#F3F3F3] shadow-md ${props.displayingRecipes ? "sm:hidden" : "flex"}  md:w-[500] h-full p-8 pr-4 transition-all overflow-auto`}>
             <div className={"max-h-full w-fit"}>
+                <img alt="easymeal" className="inline w-[40px] h-[62px] mr-3 mb-5" src={logo}></img>
                 <a href="/" className="font-Raleway font-bold text-[#0ACF83] text-4xl">EasyMeal</a>
                 <br /><br />
 

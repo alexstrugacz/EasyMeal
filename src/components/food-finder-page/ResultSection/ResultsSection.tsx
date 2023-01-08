@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useOnScreen from '../../../hooks/use-on-screen-hook';
 import { IRecipe } from '../../../types/IRecipe';
 import ResultItem from '../ResultItem/ResultItem';
+
 
 const ResultsSection: React.FC<{
     displayingRecipes: boolean;
