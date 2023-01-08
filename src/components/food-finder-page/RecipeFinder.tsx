@@ -4,15 +4,11 @@ import ResultsSection from "./ResultSection/ResultsSection";
 import TabBar from "./TabBar/TabBar";
 
 const RecipeFinder: React.FC<{}> = () => {
-    const recipeFinderHook = useRecipeFinderHook();
-
-    return <div className={"flex h-screen"}>
-        <TabBar
-            handleLoadRecipes={recipeFinderHook.handleLoadRecipes}
-        />
-        <ResultsSection
-            recipes={recipeFinderHook.results}
-        />
+    return <div>
+        <TabBar handleLoadRecipes={function (ingredients: string[], nutritionGoal: string, minCalories: number | undefined, maxCalories: number | undefined): Promise<void> {
+            throw new Error("Function not implemented.");
+        } } />
+        <ResultsSection recipes={undefined} />
     </div>;
 };
 
