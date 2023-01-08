@@ -21,7 +21,6 @@ const ResultItem: React.FC<{
                 <p className={"font-Inter text-[#E0E0E] text-left font-medium font-bold text-xl mt-4"}>{props.recipe.recipe.header}</p>
                 <div className='flex text-[#0E0E0E]'>
                     <p className={"font-Inter text-left first-letter:text-md mt-1"}>{`${props.recipe.recipe.calories} calories`}</p>
-                    
                 </div>
                 <p className={`font-regular pt-1 font-Inter ${props.recipe.pctAvailable > 0 ? "text-[#25B87F]" : "text-zinc-400"}`}>{`${props.recipe.ingredientCount}/${props.recipe.totalIngredients} ingredients ready`}</p>
                 <div className={"bg-[#25B87F] rounded-lg p-2 py-2 mt-3"}>
