@@ -9,6 +9,10 @@ const Body: React.FC<{}> = () => {
             <NutritionMadeEasy />
             <EasyMealHealthScore />
             <BackedByResearch />
+            <br/>
+            <br/>
+            <br/>
+
         </div>
     );
 };
