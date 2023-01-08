@@ -39,18 +39,19 @@ const ResultsSection: React.FC<{
     }, [props.recipes])
 
     if (props.recipes) {
-        return <div className={`sm:${props.displayingRecipes ? "block flex-1" : "hidden"} md:block md:flex-1 h-full overflow-auto`}>
+        return <div className={`sm:${props.displayingRecipes ? "block flex-1" : "hidden"} md:block md:flex-1 h-full md:overflow-auto`}>
             <div className={"hidden sm:flex justify-between absolute top-0 w-full bg-zinc-50 items-center z-50 p-4"}>
                 <h2 className={"text-2xl font-bold font-Inter"}>
                     Meals 🥗
                 </h2>
                 <p onClick={props.stopDisplayingRecipes} className={"text-xl font-Inter text-blue-500 hover:cursor-pointer hover:text-blue-600 transition-all"}>Go Back</p>
             </div>
-            <br />
-            <br />
-            <br />
 
-            <div className="sm:m-4 md:m-8 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4 gap-4 wrap">
+            <div className="sm:h-screen sm:overflow-auto sm:m-4 md:m-8 grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4 gap-4 wrap">
+
+                <br />
+                <br />
+                <br />
                 {displayedRecipes.map((recipe, index) => {
                     return (
                         <ResultItem

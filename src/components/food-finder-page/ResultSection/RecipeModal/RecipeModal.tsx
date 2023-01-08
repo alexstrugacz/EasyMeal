@@ -113,7 +113,7 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
     return (
         <div className={"fixed top-0 left-0 right-0 z-50"}>
             <div className="modal-overlay z-10 bg-[#7f7f7f] opacity-50 fixed left-0 top-0 right-0 bottom-0" onClick={onClose}></div>
-            <div className={"sm:w-full md:w-3/5 z-50 rounded-3xl items-center fixed left-1/2 -translate-x-1/2 md:top-20 sm:top-10 sm:h-full sm:pb-20 md:h-5/6 overflow-y-auto"}>
+            <div className={"sm:w-full md:w-3/5 z-50 rounded-3xl items-center fixed left-1/2 -translate-x-1/2 md:top-20 sm:top-20 sm:h-full sm:pb-20 md:h-5/6 overflow-y-auto"}>
                 <div className="font-Inter bg-[#fff] rounded-3xl overflow-x-hidden" onClick={(event) => event.stopPropagation()}>
                     <img src={recipe.recipe.imageUrl} className="w-full object-cover h-96 rounded-3xl" />
 
