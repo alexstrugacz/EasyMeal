@@ -2,6 +2,9 @@ import { useState } from "react";
 import { IRecipe } from "../types/IRecipe";
 
 export const useRecipeFinderHook = () => {
+
+  const [displayingRecipes, setDisplayingRecipes] = useState(false);
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>();
   const [results, setResults] = useState<IRecipe[] | undefined>();
@@ -9,9 +12,16 @@ export const useRecipeFinderHook = () => {
   const [nutritionGoal, setNutritionGoal] = useState<string | undefined>();
   const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]);
 
+  const startDisplayingRecipes = () => {
+    setDisplayingRecipes(true);
+  }
+
+  const stopDisplayingRecipes = () => {
+    setDisplayingRecipes(false);
+  }
+
   const handleSelectResult = (newResult: IRecipe | undefined) => {
     setSelectedResult(newResult);
-
   }
 
   const handleClose = () => {
@@ -46,9 +56,15 @@ export const useRecipeFinderHook = () => {
     console.log("new recipes", newRecipes);
 
     setResults(newRecipes);
+    startDisplayingRecipes();
   };
 
   return {
+
+    displayingRecipes,
+    startDisplayingRecipes,
+    stopDisplayingRecipes,
+
     nutritionGoal,
     error,
     results,

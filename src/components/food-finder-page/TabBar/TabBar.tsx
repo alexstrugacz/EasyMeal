@@ -12,6 +12,7 @@ import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import { Puff } from 'react-loading-icons'
 
 const TabBar: React.FC<{
+    displayingRecipes: boolean;
     handleLoadRecipes: (
         ingredients: string[],
         nutritionGoal: string,
@@ -124,7 +125,7 @@ const TabBar: React.FC<{
     }, [])
 
     return (
-        <div className={`flex bg-[#F3F3F3] shadow-md w-[500] h-full p-8 pr-4 transition-all overflow-auto`}>
+        <div className={`bg-[#F3F3F3] shadow-md ${props.displayingRecipes ? "sm:hidden" : "flex"}  md:w-[500] h-full p-8 pr-4 transition-all overflow-auto`}>
             <div className={"max-h-full w-fit"}>
                 <a href="/" className="font-Raleway font-bold text-[#0ACF83] text-4xl">EasyMeal</a>
                 <br /><br />
@@ -148,7 +149,7 @@ const TabBar: React.FC<{
                 <br />
                 <p className="font-bold font-Inter text-xl">What ingredients do you have?</p>
                 <br />
-                <div className="w-[500px] flex flex-wrap gap-3">
+                <div className="md:w-[500px] flex flex-wrap gap-3">
                     {categories.map((category, index) => {
                         const ingredientInfo = ingredientTypes[category];
 

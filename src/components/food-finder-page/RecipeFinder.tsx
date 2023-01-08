@@ -10,11 +10,14 @@ const RecipeFinder: React.FC<{}> = () => {
     return (
         <React.Fragment><div className={"flex h-screen"}>
             <TabBar
+                displayingRecipes={recipeFinderHook.displayingRecipes}
                 handleLoadRecipes={recipeFinderHook.handleLoadRecipes}
             />
             <ResultsSection
+                displayingRecipes={recipeFinderHook.displayingRecipes}
                 recipes={recipeFinderHook.results}
                 handleSelectResult={recipeFinderHook.handleSelectResult}
+                stopDisplayingRecipes={recipeFinderHook.stopDisplayingRecipes}
             />
         </div>
 

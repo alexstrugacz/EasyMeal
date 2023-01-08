@@ -113,7 +113,7 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
     return (
         <div className={"fixed top-0 left-0 right-0 z-50"}>
             <div className="modal-overlay z-10 bg-[#7f7f7f] opacity-50 fixed left-0 top-0 right-0 bottom-0" onClick={onClose}></div>
-            <div className={"w-3/5 z-50 rounded-3xl items-center fixed left-1/2 -translate-x-1/2 top-20 h-5/6 overflow-y-auto"}>
+            <div className={"sm:w-full md:w-3/5 z-50 rounded-3xl items-center fixed left-1/2 -translate-x-1/2 md:top-20 sm:top-10 sm:h-full sm:pb-20 md:h-5/6 overflow-y-auto"}>
                 <div className="font-Inter bg-[#fff] rounded-3xl overflow-x-hidden" onClick={(event) => event.stopPropagation()}>
                     <img src={recipe.recipe.imageUrl} className="w-full object-cover h-96 rounded-3xl scale-[1.003]" />
                     <div className={"px-10 pb-10"}>
@@ -121,7 +121,30 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                         <div className="border-t-1 border-b-1 border-[#eee] text-lg">
                             {recipe.recipe.calories} Calories
                         </div>
-                        <div className={"flex mt-5 gap-10"}>
+
+                        <div className={"md:hidden sm:mt-5 mb-5 flex flex-1 flex-col"}>
+                            <div className={"flex"}>
+                                <PieChart
+                                    className="w-40 h-40"
+                                    data={pieChartData}
+                                />
+                                <div className="flex flex-col justify-center p-10">
+                                    <div className="flex items-center">
+                                        <div className="legend-icon w-3 h-3 mr-2 rounded-lg" style={{ backgroundColor: '#e818e8ff' }}></div>
+                                        <div className="legend-label">Carbs</div>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="legend-icon w-3 h-3 mr-2 rounded-lg" style={{ backgroundColor: '#ff9200ff' }}></div>
+                                        <div className="legend-label">Fat</div>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="legend-icon w-3 h-3 mr-2 rounded-lg" style={{ backgroundColor: '#009bffff' }}></div>
+                                        <div className="legend-label">Protein</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={"md:flex mt-5 gap-10"}>
                             <div className={"flex flex-1 flex-col"}>
                                 {/* Implement system to display the correct properties based on health score */}
                                 <h4 className="modal-health-score text-lg text-neutral-800">EasyMeal Health Score™</h4>
@@ -148,7 +171,7 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                                 })}
 
                             </div>
-                            <div className={"flex flex-1 flex-col"}>
+                            <div className={"sm:hidden flex flex-1 flex-col"}>
                                 <div className={"flex"}>
                                     <PieChart
                                         className="w-40 h-40"
