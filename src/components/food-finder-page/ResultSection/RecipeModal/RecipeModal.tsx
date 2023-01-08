@@ -113,7 +113,7 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
     return (
         <div className={"fixed top-0 left-0 right-0 z-50"}>
             <div className="modal-overlay z-10 bg-[#7f7f7f] opacity-50 fixed left-0 top-0 right-0 bottom-0" onClick={onClose}></div>
-            <div className={"w-3/5 z-50 rounded-3xl items-center fixed left-1/2 -translate-x-1/2 top-20 h-5/6 overflow-y-auto"}>
+            <div className={"sm:w-full md:w-3/5 z-50 rounded-3xl items-center fixed left-1/2 -translate-x-1/2 md:top-20 sm:top-14 sm:h-full sm:pb-20 md:h-5/6 overflow-y-auto"}>
                 <div className="font-Inter bg-[#fff] rounded-3xl overflow-x-hidden" onClick={(event) => event.stopPropagation()}>
                     <img src={recipe.recipe.imageUrl} className="w-full object-cover h-96 rounded-3xl" />
 
@@ -122,10 +122,39 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                         <div className="border-t-1 border-b-1 border-[#eee] text-lg">
                             {recipe.recipe.calories} Calories
                         </div>
-                        <div className={"flex mt-5 gap-10"}>
+
+                        <div className={"md:hidden sm:mt-5 mb-5 flex flex-1 flex-col"}>
+                            <div className={"flex"}>
+                                <PieChart
+                                    className="w-40 h-40"
+                                    data={pieChartData}
+                                />
+                                <div className="flex flex-col justify-center p-10">
+                                    <div className="flex items-center">
+                                        <div className="legend-icon w-3 h-3 mr-2 rounded-lg" style={{ backgroundColor: '#e818e8ff' }}></div>
+                                        <div className="legend-label">Carbs</div>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="legend-icon w-3 h-3 mr-2 rounded-lg" style={{ backgroundColor: '#ff9200ff' }}></div>
+                                        <div className="legend-label">Fat</div>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <div className="legend-icon w-3 h-3 mr-2 rounded-lg" style={{ backgroundColor: '#009bffff' }}></div>
+                                        <div className="legend-label">Protein</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <h4 className="modal-health-score text-xl font-bold text-neutral-900">Nutrition Insights</h4>
+
+
+                        <hr className={"mb-3 mt-1"} />
+
+                        <div className={"md:flex gap-10"}>
                             <div className={"flex flex-1 flex-col"}>
                                 {/* Implement system to display the correct properties based on health score */}
-                                <h4 className="modal-health-score text-lg text-neutral-800">EasyMeal Health Score™</h4>
+                                <h4 className="modal-health-score text-lg text-zinc-500 align-text-top -mt-1 mb-2">EasyMeal Health Score™</h4>
 
                                 <div className={"bg-[#25B87F] w-fit rounded-lg p-2 py-2 mt-1 mb-5"}>
                                     <p className={" text-white font-Inter font-bold text-lg"}>{healthScore}/10.0</p>
@@ -149,10 +178,10 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                                 })}
 
                             </div>
-                            <div className={"flex flex-1 flex-col"}>
+                            <div className={"sm:hidden flex flex-1 flex-col"}>
                                 <div className={"flex"}>
                                     <PieChart
-                                        className="w-40 h-40"
+                                        className="w-40 h-40 mt-4"
                                         data={pieChartData}
                                     />
                                     <div className="flex flex-col justify-center p-10">
@@ -174,8 +203,8 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                         </div>
 
                         <br />
-                        <hr className={"mb-3"} />
-                        <h4 className="modal-health-score text-lg text-neutral-900">Ingredients</h4>
+                        <h4 className="modal-health-score text-xl font-bold text-neutral-900">Ingredients</h4>
+                        <hr className={"mt-1 mb-3"} />
                         <p className={`${recipe.ingredientCount > 0 ? "text-[#25B87F]" : "text-zinc-500"} text-lg`}>{recipe.ingredientCount}/{recipe.totalIngredients} ingredients available</p>
                         <br />
                         <div>
@@ -212,9 +241,6 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                             Go to Recipe
                             <ChevronRightIcon className={"w-5"} />
                         </button>
-
-
-
                     </div>
 
                 </div>

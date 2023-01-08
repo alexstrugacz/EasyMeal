@@ -10,8 +10,10 @@ import { FITNESS_GOALS, INGREDIENT_DATA } from '../../../constants/ingredient-da
 import TabBarOption from './TabBarOption';
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import { Puff } from 'react-loading-icons'
+const logo = require("./assets/logo.png")
 
 const TabBar: React.FC<{
+    displayingRecipes: boolean;
     handleLoadRecipes: (
         ingredients: string[],
         nutritionGoal: string,
@@ -124,9 +126,12 @@ const TabBar: React.FC<{
     }, [])
 
     return (
-        <div className={`flex bg-[#F3F3F3] shadow-md w-[500] h-full p-8 pr-4 transition-all overflow-auto`}>
+        <div className={`bg-[#F3F3F3] shadow-md ${props.displayingRecipes ? "sm:hidden" : "flex"}  md:w-[500] h-full p-8 pr-4 transition-all overflow-auto`}>
             <div className={"max-h-full w-fit"}>
-                <a href="/" className="font-Raleway font-bold text-[#0ACF83] text-4xl">EasyMeal</a>
+                <div className={"flex items-center"}>
+                    <img src={logo} className={"w-[40px] h-[62px] mr-3 mb-1"} />
+                    <a href="/" className="font-Raleway font-bold text-[#0ACF83] text-4xl">EasyMeal</a>
+                </div>
                 <br /><br />
 
                 <p className="font-bold font-Inter text-xl mb-2">What is your primary fitness goal?</p>
@@ -148,7 +153,7 @@ const TabBar: React.FC<{
                 <br />
                 <p className="font-bold font-Inter text-xl">What ingredients do you have?</p>
                 <br />
-                <div className="w-[500px] flex flex-wrap gap-3">
+                <div className="md:w-[500px] flex flex-wrap gap-3">
                     {categories.map((category, index) => {
                         const ingredientInfo = ingredientTypes[category];
 
@@ -227,6 +232,10 @@ const TabBar: React.FC<{
 
                     </div>
                 )}
+                <br />
+                <br />
+                <br />
+                <br />
                 <br />
 
 

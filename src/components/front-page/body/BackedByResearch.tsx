@@ -1,5 +1,5 @@
 import React from 'react';
-const mb2 = require('./images/mbprotwo.png');
+const mb2 = require('./images/laptop-2.png');
 
 const WHITEPAPER = "https://docs.google.com/document/d/1-MwgyTuHoNe9Abqr7I1n2g36QSnwSh7rTYbGU1hf8KI/edit?usp=sharing";
 
@@ -12,7 +12,7 @@ const BackedByResearch: React.FC<{}> = () => {
                     <img className='md:w-1/2 scale-[0.9]' alt='macbook pro' src={mb2}></img>
                     <br />
                 </div>
-                <div className='md:w-1/2 md:ml-8'>
+                <div className='sm:px-4 md:w-1/2 md:ml-8'>
                     <h2 className='font-Inter text-center md:text-left text-3xl mt-2 font-bold text-[#252B42]'>Backed by evidence-based <br className={"hidden xl:block"} />research</h2>
                     <p className='font-Inter text-center md:text-left text-lg px-6 md:px-0 my-6 text-[#374754]'>Backed by <a href={WHITEPAPER} target={"_blank"} className='hover:bold transition-all underline'>numerous studies</a>, our meal plans are scientifically proven to improve your health</p>
                     <div className={"flex justify-center md:justify-start"}>
