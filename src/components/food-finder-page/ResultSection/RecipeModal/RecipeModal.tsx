@@ -145,10 +145,16 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                                 </div>
                             </div>
                         </div>
-                        <div className={"md:flex mt-5 gap-10"}>
+                        <br />
+                        <h4 className="modal-health-score text-xl font-bold text-neutral-900">Nutrition Insights</h4>
+
+
+                        <hr className={"mb-3 mt-1"} />
+
+                        <div className={"md:flex gap-10"}>
                             <div className={"flex flex-1 flex-col"}>
                                 {/* Implement system to display the correct properties based on health score */}
-                                <h4 className="modal-health-score text-lg text-neutral-800">EasyMeal Health Score™</h4>
+                                <h4 className="modal-health-score text-lg text-zinc-500 align-text-top -mt-1 mb-2">EasyMeal Health Score™</h4>
 
                                 <div className={"bg-[#25B87F] w-fit rounded-lg p-2 py-2 mt-1 mb-5"}>
                                     <p className={" text-white font-Inter font-bold text-lg"}>{healthScore}/10.0</p>
@@ -175,7 +181,7 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                             <div className={"sm:hidden flex flex-1 flex-col"}>
                                 <div className={"flex"}>
                                     <PieChart
-                                        className="w-40 h-40"
+                                        className="w-40 h-40 mt-4"
                                         data={pieChartData}
                                     />
                                     <div className="flex flex-col justify-center p-10">
@@ -197,8 +203,8 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                         </div>
 
                         <br />
-                        <hr className={"mb-3"} />
-                        <h4 className="modal-health-score text-lg text-neutral-900">Ingredients</h4>
+                        <h4 className="modal-health-score text-xl font-bold text-neutral-900">Ingredients</h4>
+                        <hr className={"mt-1 mb-3"} />
                         <p className={`${recipe.ingredientCount > 0 ? "text-[#25B87F]" : "text-zinc-500"} text-lg`}>{recipe.ingredientCount}/{recipe.totalIngredients} ingredients available</p>
                         <br />
                         <div>
@@ -235,9 +241,6 @@ const RecipeModal: React.FC<RecipeModalProps> = ({ selectedRecipe, onClose, sele
                             Go to Recipe
                             <ChevronRightIcon className={"w-5"} />
                         </button>
-
-
-
                     </div>
 
                 </div>

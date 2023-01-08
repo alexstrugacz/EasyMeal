@@ -4,7 +4,7 @@ const mb1 = require('./images/mbproone.png');
 
 const EasyMealHealthScore: React.FC<{}> = () => {
     return (
-        <div className="flex justify-center w-full bg-white py-32 overflow-hidden sm:px-4 ">
+        <div className="flex justify-center w-full bg-white py-12 pb-16 pt-0 overflow-hidden sm:px-4 ">
             <div className='max-w-6xl w-full flex flex-col md:flex-row items-center'>
                 <img className='md:w-1/2 scale-[0.9]' alt='macbook pro' src={mb1}></img>
                 <br className={"md:hidden"} />

@@ -6,7 +6,7 @@ const MiniItem: React.FC<{
     text: string;
 }> = (props) => {
     return (
-        <div className="w-full md:w-1/3 sm:mx-auto max-w-sm pb-0 md:pb-10 p-6 flex flex-col flex-grow flex-shrink hover:scale-105 transition-all">
+        <div className="w-full md:w-1/3 sm:mx-auto max-w-sm pb-0 md:pb-10 sm:p-6 md:p-2 flex flex-col flex-grow flex-shrink hover:scale-105 transition-all">
             <div className="flex flex-col items-center flex-1 py-7 bg-zinc-100 rounded-2xl overflow-hidden shadow">
                 <div className="flex justify-center items-center bg-[#14FFBC] w-16 h-16 rounded-full shadow-md">
                     {props.icon && (
