@@ -23,7 +23,7 @@ const ResultItem: React.FC<{
                     <p className={"font-Inter text-left first-letter:text-md mt-1"}>{`${props.recipe.recipe.calories} calories`}</p>
                 </div>
                 <p className={`font-regular pt-1 font-Inter ${props.recipe.pctAvailable > 0 ? "text-[#25B87F]" : "text-zinc-400"}`}>{`${props.recipe.ingredientCount}/${props.recipe.totalIngredients} ingredients ready`}</p>
-                <div className={"bg-[#25B87F] rounded-lg p-2 py-2 mt-3"}>
+                <div className={"bg-[#25B87F] rounded-lg p-2 py-2 mt-3 overflow-hidden"}>
                     <p className={"text-zinc-100 font-Inter text-md"}>
                         EasyMeal Health Score™
                     </p>

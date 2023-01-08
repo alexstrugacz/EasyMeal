@@ -7,6 +7,15 @@ module.exports = {
         Inter: ["Inter", "sans-serif"],
         Raleway: ["Raleway", "sans-serif"],
       },
+      screens: {
+        "sm": {
+          "min": "0px",
+          "max": "1000px"
+        },
+        "md": {
+          "min": "1000px"
+        }
+      }
     },
   },
   plugins: [],
