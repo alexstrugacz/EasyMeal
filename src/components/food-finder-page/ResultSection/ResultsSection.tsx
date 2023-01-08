@@ -1,19 +1,9 @@
-import React, { useState } from 'react';
-import RecipeModal from './RecipeModal/RecipeModal';
+import React from 'react';
 
-type ResultsSectionProps = {
-  show: boolean;
-};
-
-const ResultsSection: React.FC<ResultsSectionProps> = ({ show }) => {
-  const [showModal, setShowModal] = useState(show);
-
-  return (
-    <div>
-      <button onClick={() => setShowModal(true)}>Show Modal</button>
-      <RecipeModal onClose={() => setShowModal(false)} show={showModal} />
-    </div>
-  );
+const ResultsSection: React.FC<{}> = () => {
+    return <div>
+        Result, Result, Result
+    </div>;
 };
 
 export default ResultsSection;
